@@ -1,0 +1,14 @@
+{
+  "tool": "mcp-playwright",
+  "action": "exec",
+  "args": {
+    "steps": [
+      { "goto": "${env.N8N_URL}" },
+      { "waitForSelector": "text=New Workflow" },
+      { "click": "text=New Workflow" },
+      { "waitForSelector": "text=Add Node" }
+    ]
+  }
+}
+
+

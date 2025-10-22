@@ -1,0 +1,19 @@
+# env & logs
+.env
+automation.log
+
+# playwright artifacts
+playwright-report/
+test-results/
+
+# node
+node_modules/
+
+# os junk
+.DS_Store
+
+# auth session state
+auth/state.json
+
+# auth n8n
+auth/state.json
