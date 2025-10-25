@@ -1,11 +1,9 @@
 {
   "name": "n8n-agent",
   "version": "1.0.0",
-  "description": "Этот проект позволяет управлять n8n через браузерные действия Playwright, вызываемые из Cursor по Model Context Protocol (MCP).",
+  "description": "Базовая авторизация для n8n через Playwright MCP (только auth/state.json).",
   "main": "index.js",
-  "directories": {
-    "example": "examples"
-  },
+  "directories": {},
   "scripts": {
     "auth:refresh": "bash auth/refresh_state.sh",
     "mcp:start": "npx @playwright/mcp@latest --storage-state=auth/state.json"
