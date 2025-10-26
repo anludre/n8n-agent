@@ -11,7 +11,9 @@
     "mcp:start": "npx @playwright/mcp@0.0.44 --storage-state=auth/state.json",
     "postinstall": "playwright install --with-deps",
     "validate:artifacts": "node scripts/validate-artifacts.js",
-    "cycle": "tsx scripts/run_cycle.ts"
+    "cycle": "tsx scripts/run_cycle.ts",
+    "qa:verify": "tsx scripts/qa/verify.ts",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +25,7 @@
     "ajv": "^8.17.1",
     "tsx": "^4.19.0",
     "@playwright/mcp": "0.0.44",
-    "playwright": "^1.56.1"
+    "playwright": "^1.56.1",
+    "husky": "^9.1.6"
   }
 }

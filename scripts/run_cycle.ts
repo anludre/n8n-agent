@@ -1,6 +1,9 @@
 #!/usr/bin/env tsx
 import fs from 'fs';
 import path from 'path';
+import * as explorer from './explorer/run';
+import * as controller from './controller/run';
+import * as developer from './developer/run';
 
 type CycleResult = 'INITIATED' | 'PLANNED' | 'EXECUTED' | 'VERIFIED' | 'CONVERGED' | 'COMPLETED' | 'FAILED';
 
@@ -39,6 +42,18 @@ async function main() {
 
   writeJsonl(cycleLog, <CycleLogEntry>{ timestamp: nowIso(), stage: 'INIT', status: 'INITIATED', message: goal });
 
+  // Preflight auth check
+  const pre = await runCmd('node', ['auth/check_auth.js']);
+  writeJsonl(cycleLog, { timestamp: nowIso(), stage: 'PREFLIGHT', status: `EXIT_${pre.code}`, message: pre.stdout.trim() || pre.stderr.trim() });
+  if (pre.code === 2) {
+    writeJsonl(cycleLog, { timestamp: nowIso(), stage: 'PREFLIGHT', status: 'NEEDS_LOGIN', message: 'Run npm run auth:refresh or auth:demo' });
+    process.exit(2);
+  }
+  if (pre.code !== 0) {
+    writeJsonl(cycleLog, { timestamp: nowIso(), stage: 'PREFLIGHT', status: 'ERROR' });
+    process.exit(1);
+  }
+
   // 1) Explorer (read-only discovery)
   writeJsonl(cycleLog, { timestamp: nowIso(), stage: 'EXPLORER', status: 'START' });
   // Placeholder: integrate actual MCP Explorer command if available
@@ -66,16 +81,21 @@ async function main() {
     const devLog = path.join('reports', 'developer', 'execution.jsonl');
     writeJsonl(devLog, { timestamp: nowIso(), actionId: 'noop', status: 'DONE' });
 
-    // 4) QA (verify)
+    // 4) QA (verify) - external verifier produces report.json per schema
     writeJsonl(cycleLog, { timestamp: nowIso(), stage: 'QA', status: 'VERIFY' });
+    const qaRun = await runCmd('npx', ['tsx', 'scripts/qa/verify.ts']);
     const qaReportPath = path.join('reports', 'qa', 'report.json');
-    const qaReport = { version: '1', generatedAt: nowIso(), result: 'PASSED', artifacts: [], checks: [] };
-    const qaDir = path.dirname(qaReportPath);
-    if (!fs.existsSync(qaDir)) fs.mkdirSync(qaDir, { recursive: true });
-    fs.writeFileSync(qaReportPath, JSON.stringify(qaReport, null, 2));
-    if (qaReport.result !== 'PASSED') {
-      writeJsonl(cycleLog, { timestamp: nowIso(), stage: 'QA', status: 'FAILED', message: qaReport.result });
-      writeJsonl(cycleLog, { timestamp: nowIso(), stage: 'ORCHESTRATOR', status: 'FAILED' });
+    let qaResult = 'FAILED';
+    try {
+      const rpt = JSON.parse(fs.readFileSync(qaReportPath, 'utf-8')) as { result: string; artifacts?: string[] };
+      qaResult = rpt.result || 'FAILED';
+      if (qaResult !== 'PASSED') {
+        writeJsonl(cycleLog, { timestamp: nowIso(), stage: 'QA', status: 'FAILED', message: qaResult });
+        // Attempt another controller loop
+        continue;
+      }
+    } catch (e) {
+      writeJsonl(cycleLog, { timestamp: nowIso(), stage: 'QA', status: 'ERROR', message: 'Invalid QA report' });
       process.exit(1);
     }
   }

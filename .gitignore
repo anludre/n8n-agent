@@ -1,6 +1,6 @@
-# Optional: local artifacts/reports (comment out if you want to commit them)
-# artifacts/
-# reports/
+# Local artifacts/reports (ignored by default for security)
+artifacts/
+reports/
 # env & logs
 .env
 automation.log

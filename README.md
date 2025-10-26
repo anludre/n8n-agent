@@ -143,6 +143,12 @@ npm run validate:artifacts
 - Используйте `HEADLESS`/`DEMO`; `HEADFUL` устарел (см. предупреждение в `auth/login.js`).
 - Для нестандартных форм логина потребуется скорректировать селекторы в `auth/config.js`.
 
+### Безопасность: секреты и артефакты
+- По умолчанию каталог `reports/` и локальные `artifacts/` игнорируются Git (риск утечки cookie/скриншотов).
+- В репозиторий не должны попадать реальные отчёты и `auth/state.json`.
+- Настроен pre-commit‑хук (Husky), который отклоняет коммиты, содержащие `auth/state.json`, `reports/` или `artifacts/`.
+  - Установка хуков происходит автоматически через `npm install` (скрипт `prepare`).
+
 ### Запуск цикла (Orchestrator)
 Скрипт высокого уровня последовательно выполняет роли (Explorer → Controller → Developer → QA → Manager) и пишет общий журнал:
 
@@ -153,8 +159,27 @@ npm run cycle -- "Цель в свободной форме"
 - Лимит попыток Controller: `CONTROLLER_MAX_ATTEMPTS` (по умолчанию 2)
 - Таймаут шагов Developer: `DEV_STEP_TIMEOUT_SEC` (по умолчанию 30)
 - Журнал цикла: `reports/orchestrator/cycle.jsonl`
+- Префлайт: перед началом выполняется `node auth/check_auth.js`; при `NEEDS_LOGIN` цикл прерывается с подсказкой обновить `auth/state.json`.
+- Shared Playwright context: модули переиспользуют конфигурацию таймаутов/ретраев из `auth/config.js` через `scripts/playwright/context.ts`.
 
 Примечание: текущая реализация содержит заглушки вызовов MCP для ролей и создаёт минимальные артефакты согласно схемам; замените заглушки на конкретные команды MCP в вашей среде.
+
+### Модули ролей (локальные скрипты)
+Каждая роль имеет исполняемый модуль с функцией `run()` и артефактами по схемам:
+- Explorer: `scripts/explorer/run.ts` → `reports/explore/inventory.json`
+- Controller: `scripts/controller/run.ts` → `reports/control/plan.json` (читает `DESIRED_PATH` или `desired/example_workflow.json`)
+- Developer: `scripts/developer/run.ts` → `reports/developer/execution.jsonl`
+- QA: `scripts/qa/run.ts` → использует `scripts/qa/verify.ts`, пишет `reports/qa/report.json`
+- Manager: `scripts/manager/run.ts` → `reports/manager/operations.jsonl`
+
+Общий Playwright‑контекст: `scripts/playwright/context.ts`, обёртка для оркестрации: `scripts/orchestrator/context.ts`.
+
+### Desired state (вход контроллера)
+Контроллер читает JSON‑описание желаемого состояния:
+- По умолчанию: `desired/example_workflow.json`
+- Можно задать свой путь через `DESIRED_PATH=/path/to/desired.json`
+
+Формат можно расширять; контроллер должен формировать детерминированный план (`reports/control/plan.json`), который затем исполняется Developer.
 
 ### Траблшутинг
 - `OK: authorized ...` — авторизация валидна
