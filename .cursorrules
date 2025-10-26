@@ -5,7 +5,7 @@
       "args": ["@playwright/mcp@latest", "--storage-state=auth/state.json"]
     }
   },
-  "role_file": "./roles/automation_orchestrator.md"
+  "role_file": "./roles/orchestrator.md"
 }
 
 

@@ -6,12 +6,19 @@
   "directories": {},
   "scripts": {
     "auth:refresh": "bash auth/refresh_state.sh",
-    "mcp:start": "npx @playwright/mcp@latest --storage-state=auth/state.json"
+    "auth:check": "node auth/check_auth.js",
+    "auth:demo": "HEADLESS=false DEMO=1 SLOWMO=350 node auth/login.js",
+    "mcp:start": "npx @playwright/mcp@0.0.44 --storage-state=auth/state.json",
+    "postinstall": "playwright install --with-deps"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.18 <23"
+  },
   "devDependencies": {
+    "@playwright/mcp": "0.0.44",
     "playwright": "^1.56.1"
   }
 }
