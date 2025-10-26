@@ -1,7 +1,22 @@
 {
   "version": "1",
-  "name": "Example Workflow",
-  "nodes": [],
-  "links": []
+  "name": "Daily Digest",
+  "metadata": {
+    "tags": ["digest", "daily"],
+    "active": false
+  },
+  "nodes": [
+    {
+      "id": "HttpTrigger_1",
+      "type": "n8n-nodes-base.httpTrigger",
+      "position": { "x": 280, "y": 380 },
+      "parameters": {
+        "path": "daily-digest",
+        "options": { "responseCode": 200 }
+      }
+    }
+  ],
+  "links": [
+    { "from": "HttpTrigger_1", "to": "Function_1", "output": 0, "input": 0 }
+  ]
 }
-
