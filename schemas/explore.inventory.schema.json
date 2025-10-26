@@ -1,0 +1,31 @@
+{
+  "$id": "https://example.com/schemas/explore.inventory.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Explorer Inventory",
+  "type": "object",
+  "required": ["version", "generatedAt", "items"],
+  "properties": {
+    "version": { "type": "string" },
+    "generatedAt": { "type": "string" },
+    "notes": { "type": "string" },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind"],
+        "properties": {
+          "kind": { "type": "string" },
+          "name": { "type": "string" },
+          "selectors": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "metadata": { "type": "object", "additionalProperties": true }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
+

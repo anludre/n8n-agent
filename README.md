@@ -102,10 +102,59 @@ auth:refresh / auth:demo (auth/login.js):
 
 Опционально: при `TRACE=1` можно сохранять дополнительные трассы/скриншоты в соответствующие каталоги.
 
+### Схемы артефактов (JSON Schema)
+| Роль | Артефакт | Путь | Схема |
+|---|---|---|---|
+| Explorer | Inventory | `reports/explore/inventory.json` | `schemas/explore.inventory.schema.json` |
+| Controller | Plan | `reports/control/plan.json` | `schemas/control.plan.schema.json` |
+| Developer | Execution Log (JSONL item) | `reports/developer/execution.jsonl` | `schemas/developer.execution.schema.json` |
+| QA | Report | `reports/qa/report.json` | `schemas/qa.report.schema.json` |
+| Manager | Operations Log (JSONL item) | `reports/manager/operations.jsonl` | `schemas/manager.operations.schema.json` |
+
+Запуск валидации последних артефактов:
+```bash
+npm run validate:artifacts
+```
+
+Минимальные примеры
+```json
+// reports/explore/inventory.json
+{ "version": "1", "generatedAt": "2025-01-01T00:00:00Z", "items": [] }
+```
+```json
+// reports/control/plan.json
+{ "version": "1", "generatedAt": "2025-01-01T00:00:00Z", "status": "PLAN", "actions": [] }
+```
+```json
+// reports/qa/report.json
+{ "version": "1", "generatedAt": "2025-01-01T00:00:00Z", "result": "PASSED", "artifacts": [], "checks": [] }
+```
+```json
+// reports/developer/execution.jsonl (одна строка)
+{ "timestamp": "2025-01-01T00:00:00Z", "actionId": "a1", "status": "DONE" }
+```
+```json
+// reports/manager/operations.jsonl (одна строка)
+{ "timestamp": "2025-01-01T00:00:00Z", "operation": "RENAME", "target": "Workflow A" }
+```
+
 ### Ограничения
 - SSO/2FA не поддерживаются из коробки; могут потребовать кастомных шагов/селекторов.
 - Используйте `HEADLESS`/`DEMO`; `HEADFUL` устарел (см. предупреждение в `auth/login.js`).
 - Для нестандартных форм логина потребуется скорректировать селекторы в `auth/config.js`.
+
+### Запуск цикла (Orchestrator)
+Скрипт высокого уровня последовательно выполняет роли (Explorer → Controller → Developer → QA → Manager) и пишет общий журнал:
+
+```bash
+npm run cycle -- "Цель в свободной форме"
+```
+
+- Лимит попыток Controller: `CONTROLLER_MAX_ATTEMPTS` (по умолчанию 2)
+- Таймаут шагов Developer: `DEV_STEP_TIMEOUT_SEC` (по умолчанию 30)
+- Журнал цикла: `reports/orchestrator/cycle.jsonl`
+
+Примечание: текущая реализация содержит заглушки вызовов MCP для ролей и создаёт минимальные артефакты согласно схемам; замените заглушки на конкретные команды MCP в вашей среде.
 
 ### Траблшутинг
 - `OK: authorized ...` — авторизация валидна

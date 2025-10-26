@@ -1,0 +1,16 @@
+{
+  "$id": "https://example.com/schemas/developer.execution.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Developer Execution Log (JSONL item)",
+  "type": "object",
+  "required": ["timestamp", "actionId", "status"],
+  "properties": {
+    "timestamp": { "type": "string" },
+    "actionId": { "type": "string" },
+    "status": { "type": "string", "enum": ["DONE", "CREATED", "UPDATED", "SKIPPED", "FAILED"] },
+    "details": { "type": "object", "additionalProperties": true },
+    "message": { "type": "string" }
+  },
+  "additionalProperties": false
+}
+

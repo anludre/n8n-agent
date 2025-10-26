@@ -1,0 +1,31 @@
+{
+  "$id": "https://example.com/schemas/qa.report.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QA Report",
+  "type": "object",
+  "required": ["version", "generatedAt", "result"],
+  "properties": {
+    "version": { "type": "string" },
+    "generatedAt": { "type": "string" },
+    "result": { "type": "string", "enum": ["PASSED", "FAILED", "RETRIED", "FLAKY"] },
+    "artifacts": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "status"],
+        "properties": {
+          "name": { "type": "string" },
+          "status": { "type": "string", "enum": ["PASSED", "FAILED", "RETRIED"] },
+          "message": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
+

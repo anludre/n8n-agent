@@ -1,0 +1,29 @@
+{
+  "$id": "https://example.com/schemas/control.plan.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Controller Plan",
+  "type": "object",
+  "required": ["version", "generatedAt", "actions"],
+  "properties": {
+    "version": { "type": "string" },
+    "generatedAt": { "type": "string" },
+    "status": { "type": "string", "enum": ["PLAN", "CONVERGED", "PARTIAL", "FAILED"] },
+    "summary": { "type": "string" },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": { "type": "string", "enum": ["CREATE", "UPDATE", "DELETE"] },
+          "target": { "type": "string" },
+          "params": { "type": "object", "additionalProperties": true }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
+

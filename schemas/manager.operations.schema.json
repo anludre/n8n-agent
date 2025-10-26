@@ -1,0 +1,16 @@
+{
+  "$id": "https://example.com/schemas/manager.operations.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Manager Operations Log (JSONL item)",
+  "type": "object",
+  "required": ["timestamp", "operation", "target"],
+  "properties": {
+    "timestamp": { "type": "string" },
+    "operation": { "type": "string", "enum": ["RENAME", "ENABLE", "DISABLE", "TAGS_UPDATED"] },
+    "target": { "type": "string" },
+    "details": { "type": "object", "additionalProperties": true },
+    "message": { "type": "string" }
+  },
+  "additionalProperties": false
+}
+
