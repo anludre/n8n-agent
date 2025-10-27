@@ -1,6 +1,3 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
 # Block committing sensitive artifacts
 if git diff --cached --name-only | grep -E '^(auth/state\.json|reports/|artifacts/)' >/dev/null; then
   echo "\n[Husky] Commit blocked: remove sensitive files from the commit:" >&2
