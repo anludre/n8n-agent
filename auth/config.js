@@ -4,8 +4,9 @@ module.exports = {
     email: 'input[name="email"], input[type="email"]',
     password: 'input[name="password"], input[type="password"]',
     loginButton: 'button:has-text("Sign in"), button:has-text("Log in"), button:has-text("Войти")',
-    editorReady: 'text=/New Workflow|Create Workflow|Add Node/i',
-    workflowsListReady: 'text=/Workflows|New Workflow|Create Workflow|Add Node/i'
+    // Include common English and Russian UI markers
+    editorReady: 'text=/New Workflow|Create Workflow|Add Node|Новый воркфлоу|Создать воркфлоу|Добавить узел/i',
+    workflowsListReady: 'text=/Workflows|New Workflow|Create Workflow|Add Node|Воркфлоу|Рабочие процессы|Добавить узел/i'
   },
   timeouts: {
     short: 5000,

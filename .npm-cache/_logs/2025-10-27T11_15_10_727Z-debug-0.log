@@ -1,0 +1,455 @@
+0 verbose cli /usr/local/Cellar/node/23.11.0/bin/node /usr/local/bin/npm
+1 info using npm@10.9.2
+2 info using node@v23.11.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/andrey/Desktop/n8n-agent/.npmrc
+5 silly config load:file:/Users/andrey/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:/Users/andrey/Desktop/n8n-agent/.npm-cache/_logs/2025-10-27T11_15_10_727Z-
+10 verbose logfile /Users/andrey/Desktop/n8n-agent/.npm-cache/_logs/2025-10-27T11_15_10_727Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 silly fetch manifest ajv@^8.17.1
+15 silly packumentCache full:https://registry.npmjs.org/ajv cache-miss
+16 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+17 http fetch GET 200 https://registry.npmjs.org/npm 3204ms
+18 http fetch GET 200 https://registry.npmjs.org/ajv 7441ms (cache miss)
+19 silly packumentCache full:https://registry.npmjs.org/ajv set size:undefined disposed:false
+20 silly fetch manifest tsx@^4.19.0
+21 silly packumentCache full:https://registry.npmjs.org/tsx cache-miss
+22 http fetch GET 200 https://registry.npmjs.org/tsx 280ms (cache miss)
+23 silly packumentCache full:https://registry.npmjs.org/tsx set size:undefined disposed:false
+24 silly fetch manifest dotenv@^16.4.5
+25 silly packumentCache full:https://registry.npmjs.org/dotenv cache-miss
+26 http fetch GET 200 https://registry.npmjs.org/dotenv 478ms (cache miss)
+27 silly packumentCache full:https://registry.npmjs.org/dotenv set size:undefined disposed:false
+28 silly fetch manifest @playwright/mcp@0.0.44
+29 silly packumentCache full:https://registry.npmjs.org/@playwright%2fmcp cache-miss
+30 http fetch GET 200 https://registry.npmjs.org/@playwright%2fmcp 267ms (cache miss)
+31 silly packumentCache full:https://registry.npmjs.org/@playwright%2fmcp set size:undefined disposed:false
+32 silly fetch manifest husky@^9.1.6
+33 silly packumentCache full:https://registry.npmjs.org/husky cache-miss
+34 http fetch GET 200 https://registry.npmjs.org/husky 676ms (cache miss)
+35 silly packumentCache full:https://registry.npmjs.org/husky set size:undefined disposed:false
+36 silly placeDep ROOT @playwright/mcp@0.0.44 OK for: n8n-agent@1.0.0 want: 0.0.44
+37 silly placeDep ROOT ajv@8.17.1 OK for: n8n-agent@1.0.0 want: ^8.17.1
+38 silly placeDep ROOT dotenv@16.6.1 OK for: n8n-agent@1.0.0 want: ^16.4.5
+39 silly placeDep ROOT husky@9.1.7 OK for: n8n-agent@1.0.0 want: ^9.1.6
+40 silly placeDep ROOT tsx@4.20.6 OK for: n8n-agent@1.0.0 want: ^4.19.0
+41 silly fetch manifest playwright@1.57.0-alpha-2025-10-24
+42 silly packumentCache full:https://registry.npmjs.org/playwright cache-miss
+43 silly fetch manifest playwright-core@1.57.0-alpha-2025-10-24
+44 silly packumentCache full:https://registry.npmjs.org/playwright-core cache-miss
+45 silly fetch manifest fast-uri@^3.0.1
+46 silly packumentCache full:https://registry.npmjs.org/fast-uri cache-miss
+47 silly fetch manifest fast-deep-equal@^3.1.3
+48 silly packumentCache full:https://registry.npmjs.org/fast-deep-equal cache-miss
+49 silly fetch manifest require-from-string@^2.0.2
+50 silly packumentCache full:https://registry.npmjs.org/require-from-string cache-miss
+51 silly fetch manifest json-schema-traverse@^1.0.0
+52 silly packumentCache full:https://registry.npmjs.org/json-schema-traverse cache-miss
+53 silly fetch manifest esbuild@~0.25.0
+54 silly packumentCache full:https://registry.npmjs.org/esbuild cache-miss
+55 silly fetch manifest get-tsconfig@^4.7.5
+56 silly packumentCache full:https://registry.npmjs.org/get-tsconfig cache-miss
+57 silly fetch manifest fsevents@~2.3.3
+58 silly packumentCache full:https://registry.npmjs.org/fsevents cache-miss
+59 http fetch GET https://registry.npmjs.org/require-from-string attempt 1 failed with ETIMEDOUT
+60 http fetch GET https://registry.npmjs.org/fast-deep-equal attempt 1 failed with ETIMEDOUT
+61 http fetch GET https://registry.npmjs.org/fast-uri attempt 1 failed with ETIMEDOUT
+62 http fetch GET https://registry.npmjs.org/json-schema-traverse attempt 1 failed with ETIMEDOUT
+63 http fetch GET 200 https://registry.npmjs.org/playwright 11469ms (cache miss)
+64 silly packumentCache full:https://registry.npmjs.org/playwright set size:undefined disposed:false
+65 http fetch GET 200 https://registry.npmjs.org/playwright-core 11688ms (cache miss)
+66 silly packumentCache full:https://registry.npmjs.org/playwright-core set size:undefined disposed:false
+67 http fetch GET https://registry.npmjs.org/fsevents attempt 1 failed with ETIMEDOUT
+68 http fetch GET https://registry.npmjs.org/get-tsconfig attempt 1 failed with ETIMEDOUT
+69 http fetch GET https://registry.npmjs.org/esbuild attempt 1 failed with ETIMEDOUT
+70 http fetch GET 200 https://registry.npmjs.org/require-from-string 21666ms attempt #2 (cache miss)
+71 silly packumentCache full:https://registry.npmjs.org/require-from-string set size:undefined disposed:false
+72 http fetch GET 200 https://registry.npmjs.org/fast-deep-equal 21710ms attempt #2 (cache miss)
+73 silly packumentCache full:https://registry.npmjs.org/fast-deep-equal set size:undefined disposed:false
+74 http fetch GET 200 https://registry.npmjs.org/fast-uri 22646ms attempt #2 (cache miss)
+75 silly packumentCache full:https://registry.npmjs.org/fast-uri set size:undefined disposed:false
+76 http fetch GET 200 https://registry.npmjs.org/json-schema-traverse 22667ms attempt #2 (cache miss)
+77 silly packumentCache full:https://registry.npmjs.org/json-schema-traverse set size:undefined disposed:false
+78 http fetch GET 200 https://registry.npmjs.org/get-tsconfig 23354ms attempt #2 (cache miss)
+79 silly packumentCache full:https://registry.npmjs.org/get-tsconfig set size:undefined disposed:false
+80 http fetch GET 200 https://registry.npmjs.org/fsevents 23355ms attempt #2 (cache miss)
+81 silly packumentCache full:https://registry.npmjs.org/fsevents set size:undefined disposed:false
+82 http fetch GET 200 https://registry.npmjs.org/esbuild 28227ms attempt #2 (cache miss)
+83 silly packumentCache full:https://registry.npmjs.org/esbuild set size:undefined disposed:false
+84 silly placeDep node_modules/@playwright/mcp playwright@1.57.0-alpha-2025-10-24 OK for: @playwright/mcp@0.0.44 want: 1.57.0-alpha-2025-10-24
+85 silly placeDep node_modules/@playwright/mcp playwright-core@1.57.0-alpha-2025-10-24 OK for: @playwright/mcp@0.0.44 want: 1.57.0-alpha-2025-10-24
+86 silly placeDep ROOT fast-deep-equal@3.1.3 OK for: ajv@8.17.1 want: ^3.1.3
+87 silly placeDep ROOT fast-uri@3.1.0 OK for: ajv@8.17.1 want: ^3.0.1
+88 silly placeDep ROOT json-schema-traverse@1.0.0 OK for: ajv@8.17.1 want: ^1.0.0
+89 silly placeDep ROOT require-from-string@2.0.2 OK for: ajv@8.17.1 want: ^2.0.2
+90 silly placeDep ROOT esbuild@0.25.11 OK for: tsx@4.20.6 want: ~0.25.0
+91 silly placeDep node_modules/tsx fsevents@2.3.3 OK for: tsx@4.20.6 want: ~2.3.3
+92 silly placeDep ROOT get-tsconfig@4.13.0 OK for: tsx@4.20.6 want: ^4.7.5
+93 silly fetch manifest @esbuild/aix-ppc64@0.25.11
+94 silly packumentCache full:https://registry.npmjs.org/@esbuild%2faix-ppc64 cache-miss
+95 silly fetch manifest @esbuild/android-arm@0.25.11
+96 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fandroid-arm cache-miss
+97 silly fetch manifest @esbuild/android-arm64@0.25.11
+98 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fandroid-arm64 cache-miss
+99 silly fetch manifest @esbuild/android-x64@0.25.11
+100 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fandroid-x64 cache-miss
+101 silly fetch manifest @esbuild/darwin-arm64@0.25.11
+102 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fdarwin-arm64 cache-miss
+103 silly fetch manifest @esbuild/darwin-x64@0.25.11
+104 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fdarwin-x64 cache-miss
+105 silly fetch manifest @esbuild/freebsd-arm64@0.25.11
+106 silly packumentCache full:https://registry.npmjs.org/@esbuild%2ffreebsd-arm64 cache-miss
+107 silly fetch manifest @esbuild/freebsd-x64@0.25.11
+108 silly packumentCache full:https://registry.npmjs.org/@esbuild%2ffreebsd-x64 cache-miss
+109 silly fetch manifest @esbuild/linux-arm@0.25.11
+110 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-arm cache-miss
+111 silly fetch manifest @esbuild/linux-arm64@0.25.11
+112 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-arm64 cache-miss
+113 silly fetch manifest @esbuild/linux-ia32@0.25.11
+114 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-ia32 cache-miss
+115 silly fetch manifest @esbuild/linux-loong64@0.25.11
+116 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-loong64 cache-miss
+117 silly fetch manifest @esbuild/linux-mips64el@0.25.11
+118 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-mips64el cache-miss
+119 silly fetch manifest @esbuild/linux-ppc64@0.25.11
+120 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-ppc64 cache-miss
+121 silly fetch manifest @esbuild/linux-riscv64@0.25.11
+122 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-riscv64 cache-miss
+123 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fandroid-x64 134ms (cache miss)
+124 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fandroid-x64 set size:undefined disposed:false
+125 silly fetch manifest @esbuild/linux-s390x@0.25.11
+126 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-s390x cache-miss
+127 http fetch GET 200 https://registry.npmjs.org/@esbuild%2faix-ppc64 152ms (cache miss)
+128 silly packumentCache full:https://registry.npmjs.org/@esbuild%2faix-ppc64 set size:undefined disposed:false
+129 silly fetch manifest @esbuild/linux-x64@0.25.11
+130 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-x64 cache-miss
+131 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fandroid-arm 156ms (cache miss)
+132 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fandroid-arm set size:undefined disposed:false
+133 silly fetch manifest @esbuild/netbsd-arm64@0.25.11
+134 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fnetbsd-arm64 cache-miss
+135 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fandroid-arm64 245ms (cache miss)
+136 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fandroid-arm64 set size:undefined disposed:false
+137 silly fetch manifest @esbuild/netbsd-x64@0.25.11
+138 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fnetbsd-x64 cache-miss
+139 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-s390x 186ms (cache miss)
+140 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-s390x set size:undefined disposed:false
+141 silly fetch manifest @esbuild/openbsd-arm64@0.25.11
+142 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fopenbsd-arm64 cache-miss
+143 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fnetbsd-arm64 179ms (cache miss)
+144 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fnetbsd-arm64 set size:undefined disposed:false
+145 silly fetch manifest @esbuild/openbsd-x64@0.25.11
+146 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fopenbsd-x64 cache-miss
+147 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-x64 193ms (cache miss)
+148 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-x64 set size:undefined disposed:false
+149 silly fetch manifest @esbuild/openharmony-arm64@0.25.11
+150 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fopenharmony-arm64 cache-miss
+151 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fopenbsd-arm64 154ms (cache miss)
+152 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fopenbsd-arm64 set size:undefined disposed:false
+153 silly fetch manifest @esbuild/sunos-x64@0.25.11
+154 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fsunos-x64 cache-miss
+155 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fopenharmony-arm64 145ms (cache miss)
+156 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fopenharmony-arm64 set size:undefined disposed:false
+157 silly fetch manifest @esbuild/win32-arm64@0.25.11
+158 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fwin32-arm64 cache-miss
+159 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fopenbsd-x64 213ms (cache miss)
+160 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fopenbsd-x64 set size:undefined disposed:false
+161 silly fetch manifest @esbuild/win32-ia32@0.25.11
+162 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fwin32-ia32 cache-miss
+163 http fetch GET 200 https://registry.npmjs.org/@esbuild%2ffreebsd-arm64 600ms (cache miss)
+164 silly packumentCache full:https://registry.npmjs.org/@esbuild%2ffreebsd-arm64 set size:undefined disposed:false
+165 silly fetch manifest @esbuild/win32-x64@0.25.11
+166 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fwin32-x64 cache-miss
+167 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-ppc64 681ms (cache miss)
+168 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-ppc64 set size:undefined disposed:false
+169 silly fetch manifest resolve-pkg-maps@^1.0.0
+170 silly packumentCache full:https://registry.npmjs.org/resolve-pkg-maps cache-miss
+171 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-ia32 757ms (cache miss)
+172 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-ia32 set size:undefined disposed:false
+173 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-loong64 763ms (cache miss)
+174 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-loong64 set size:undefined disposed:false
+175 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fdarwin-x64 788ms (cache miss)
+176 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fdarwin-x64 set size:undefined disposed:false
+177 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-riscv64 793ms (cache miss)
+178 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-riscv64 set size:undefined disposed:false
+179 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-arm 801ms (cache miss)
+180 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-arm set size:undefined disposed:false
+181 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fdarwin-arm64 802ms (cache miss)
+182 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fdarwin-arm64 set size:undefined disposed:false
+183 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-arm64 903ms (cache miss)
+184 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-arm64 set size:undefined disposed:false
+185 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fwin32-arm64 628ms (cache miss)
+186 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fwin32-arm64 set size:undefined disposed:false
+187 http fetch GET 200 https://registry.npmjs.org/@esbuild%2flinux-mips64el 1182ms (cache miss)
+188 silly packumentCache full:https://registry.npmjs.org/@esbuild%2flinux-mips64el set size:undefined disposed:false
+189 http fetch GET 200 https://registry.npmjs.org/resolve-pkg-maps 502ms (cache miss)
+190 silly packumentCache full:https://registry.npmjs.org/resolve-pkg-maps set size:undefined disposed:false
+191 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fwin32-x64 613ms (cache miss)
+192 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fwin32-x64 set size:undefined disposed:false
+193 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fwin32-ia32 1157ms (cache miss)
+194 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fwin32-ia32 set size:undefined disposed:false
+195 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fnetbsd-x64 1509ms (cache miss)
+196 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fnetbsd-x64 set size:undefined disposed:false
+197 http fetch GET 200 https://registry.npmjs.org/@esbuild%2fsunos-x64 1396ms (cache miss)
+198 silly packumentCache full:https://registry.npmjs.org/@esbuild%2fsunos-x64 set size:undefined disposed:false
+199 http fetch GET 200 https://registry.npmjs.org/@esbuild%2ffreebsd-x64 3846ms (cache miss)
+200 silly packumentCache full:https://registry.npmjs.org/@esbuild%2ffreebsd-x64 set size:undefined disposed:false
+201 silly placeDep ROOT @esbuild/aix-ppc64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+202 silly placeDep ROOT @esbuild/android-arm@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+203 silly placeDep ROOT @esbuild/android-arm64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+204 silly placeDep ROOT @esbuild/android-x64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+205 silly placeDep ROOT @esbuild/darwin-arm64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+206 silly placeDep ROOT @esbuild/darwin-x64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+207 silly placeDep ROOT @esbuild/freebsd-arm64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+208 silly placeDep ROOT @esbuild/freebsd-x64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+209 silly placeDep ROOT @esbuild/linux-arm@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+210 silly placeDep ROOT @esbuild/linux-arm64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+211 silly placeDep ROOT @esbuild/linux-ia32@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+212 silly placeDep ROOT @esbuild/linux-loong64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+213 silly placeDep ROOT @esbuild/linux-mips64el@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+214 silly placeDep ROOT @esbuild/linux-ppc64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+215 silly placeDep ROOT @esbuild/linux-riscv64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+216 silly placeDep ROOT @esbuild/linux-s390x@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+217 silly placeDep ROOT @esbuild/linux-x64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+218 silly placeDep ROOT @esbuild/netbsd-arm64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+219 silly placeDep ROOT @esbuild/netbsd-x64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+220 silly placeDep ROOT @esbuild/openbsd-arm64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+221 silly placeDep ROOT @esbuild/openbsd-x64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+222 silly placeDep ROOT @esbuild/openharmony-arm64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+223 silly placeDep ROOT @esbuild/sunos-x64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+224 silly placeDep ROOT @esbuild/win32-arm64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+225 silly placeDep ROOT @esbuild/win32-ia32@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+226 silly placeDep ROOT @esbuild/win32-x64@0.25.11 OK for: esbuild@0.25.11 want: 0.25.11
+227 silly placeDep ROOT resolve-pkg-maps@1.0.0 OK for: get-tsconfig@4.13.0 want: ^1.0.0
+228 warn EBADENGINE Unsupported engine {
+228 warn EBADENGINE   package: 'n8n-agent@1.0.0',
+228 warn EBADENGINE   required: { node: '>=18.18 <23' },
+228 warn EBADENGINE   current: { node: 'v23.11.0', npm: '10.9.2' }
+228 warn EBADENGINE }
+229 silly reify moves {}
+230 silly audit bulk request {
+230 silly audit   fsevents: [ '2.3.2', '2.3.3' ],
+230 silly audit   playwright: [ '1.56.1', '1.57.0-alpha-2025-10-24' ],
+230 silly audit   'playwright-core': [ '1.56.1', '1.57.0-alpha-2025-10-24' ],
+230 silly audit   '@playwright/mcp': [ '0.0.44' ],
+230 silly audit   ajv: [ '8.17.1' ],
+230 silly audit   dotenv: [ '16.6.1' ],
+230 silly audit   husky: [ '9.1.7' ],
+230 silly audit   tsx: [ '4.20.6' ],
+230 silly audit   'fast-deep-equal': [ '3.1.3' ],
+230 silly audit   'fast-uri': [ '3.1.0' ],
+230 silly audit   'json-schema-traverse': [ '1.0.0' ],
+230 silly audit   'require-from-string': [ '2.0.2' ],
+230 silly audit   esbuild: [ '0.25.11' ],
+230 silly audit   'get-tsconfig': [ '4.13.0' ],
+230 silly audit   '@esbuild/aix-ppc64': [ '0.25.11' ],
+230 silly audit   '@esbuild/android-arm': [ '0.25.11' ],
+230 silly audit   '@esbuild/android-arm64': [ '0.25.11' ],
+230 silly audit   '@esbuild/android-x64': [ '0.25.11' ],
+230 silly audit   '@esbuild/darwin-arm64': [ '0.25.11' ],
+230 silly audit   '@esbuild/darwin-x64': [ '0.25.11' ],
+230 silly audit   '@esbuild/freebsd-arm64': [ '0.25.11' ],
+230 silly audit   '@esbuild/freebsd-x64': [ '0.25.11' ],
+230 silly audit   '@esbuild/linux-arm': [ '0.25.11' ],
+230 silly audit   '@esbuild/linux-arm64': [ '0.25.11' ],
+230 silly audit   '@esbuild/linux-ia32': [ '0.25.11' ],
+230 silly audit   '@esbuild/linux-loong64': [ '0.25.11' ],
+230 silly audit   '@esbuild/linux-mips64el': [ '0.25.11' ],
+230 silly audit   '@esbuild/linux-ppc64': [ '0.25.11' ],
+230 silly audit   '@esbuild/linux-riscv64': [ '0.25.11' ],
+230 silly audit   '@esbuild/linux-s390x': [ '0.25.11' ],
+230 silly audit   '@esbuild/linux-x64': [ '0.25.11' ],
+230 silly audit   '@esbuild/netbsd-arm64': [ '0.25.11' ],
+230 silly audit   '@esbuild/netbsd-x64': [ '0.25.11' ],
+230 silly audit   '@esbuild/openbsd-arm64': [ '0.25.11' ],
+230 silly audit   '@esbuild/openbsd-x64': [ '0.25.11' ],
+230 silly audit   '@esbuild/openharmony-arm64': [ '0.25.11' ],
+230 silly audit   '@esbuild/sunos-x64': [ '0.25.11' ],
+230 silly audit   '@esbuild/win32-arm64': [ '0.25.11' ],
+230 silly audit   '@esbuild/win32-ia32': [ '0.25.11' ],
+230 silly audit   '@esbuild/win32-x64': [ '0.25.11' ],
+230 silly audit   'resolve-pkg-maps': [ '1.0.0' ]
+230 silly audit }
+231 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/win32-x64
+232 silly reify mark deleted [ '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/win32-x64' ]
+233 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/win32-ia32
+234 silly reify mark deleted [ '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/win32-ia32' ]
+235 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/win32-arm64
+236 silly reify mark deleted [ '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/win32-arm64' ]
+237 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/sunos-x64
+238 silly reify mark deleted [ '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/sunos-x64' ]
+239 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/openharmony-arm64
+240 silly reify mark deleted [
+240 silly reify   '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/openharmony-arm64'
+240 silly reify ]
+241 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/openbsd-x64
+242 silly reify mark deleted [ '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/openbsd-x64' ]
+243 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/openbsd-arm64
+244 silly reify mark deleted [
+244 silly reify   '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/openbsd-arm64'
+244 silly reify ]
+245 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/netbsd-x64
+246 silly reify mark deleted [ '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/netbsd-x64' ]
+247 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/netbsd-arm64
+248 silly reify mark deleted [
+248 silly reify   '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/netbsd-arm64'
+248 silly reify ]
+249 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-x64
+250 silly reify mark deleted [ '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-x64' ]
+251 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-s390x
+252 silly reify mark deleted [ '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-s390x' ]
+253 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-riscv64
+254 silly reify mark deleted [
+254 silly reify   '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-riscv64'
+254 silly reify ]
+255 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-ppc64
+256 silly reify mark deleted [ '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-ppc64' ]
+257 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-mips64el
+258 silly reify mark deleted [
+258 silly reify   '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-mips64el'
+258 silly reify ]
+259 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-loong64
+260 silly reify mark deleted [
+260 silly reify   '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-loong64'
+260 silly reify ]
+261 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-ia32
+262 silly reify mark deleted [ '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-ia32' ]
+263 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-arm64
+264 silly reify mark deleted [ '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-arm64' ]
+265 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-arm
+266 silly reify mark deleted [ '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/linux-arm' ]
+267 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/freebsd-x64
+268 silly reify mark deleted [ '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/freebsd-x64' ]
+269 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/freebsd-arm64
+270 silly reify mark deleted [
+270 silly reify   '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/freebsd-arm64'
+270 silly reify ]
+271 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/darwin-arm64
+272 silly reify mark deleted [
+272 silly reify   '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/darwin-arm64'
+272 silly reify ]
+273 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/android-x64
+274 silly reify mark deleted [ '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/android-x64' ]
+275 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/android-arm64
+276 silly reify mark deleted [
+276 silly reify   '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/android-arm64'
+276 silly reify ]
+277 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/android-arm
+278 silly reify mark deleted [ '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/android-arm' ]
+279 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/aix-ppc64
+280 silly reify mark deleted [ '/Users/andrey/Desktop/n8n-agent/node_modules/@esbuild/aix-ppc64' ]
+281 http cache @esbuild/darwin-x64@https://registry.npmjs.org/@esbuild/darwin-x64/-/darwin-x64-0.25.11.tgz 0ms (cache hit)
+282 http cache resolve-pkg-maps@https://registry.npmjs.org/resolve-pkg-maps/-/resolve-pkg-maps-1.0.0.tgz 0ms (cache hit)
+283 http cache get-tsconfig@https://registry.npmjs.org/get-tsconfig/-/get-tsconfig-4.13.0.tgz 0ms (cache hit)
+284 http cache esbuild@https://registry.npmjs.org/esbuild/-/esbuild-0.25.11.tgz 0ms (cache hit)
+285 http cache require-from-string@https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz 0ms (cache hit)
+286 http cache json-schema-traverse@https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz 0ms (cache hit)
+287 http cache fast-uri@https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.0.tgz 0ms (cache hit)
+288 http cache fast-deep-equal@https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz 0ms (cache hit)
+289 http cache husky@https://registry.npmjs.org/husky/-/husky-9.1.7.tgz 0ms (cache hit)
+290 http cache dotenv@https://registry.npmjs.org/dotenv/-/dotenv-16.6.1.tgz 1ms (cache hit)
+291 http cache tsx@https://registry.npmjs.org/tsx/-/tsx-4.20.6.tgz 0ms (cache hit)
+292 http cache fsevents@https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz 0ms (cache hit)
+293 http cache ajv@https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz 0ms (cache hit)
+294 http cache @playwright/mcp@https://registry.npmjs.org/@playwright/mcp/-/mcp-0.0.44.tgz 0ms (cache hit)
+295 http cache playwright@https://registry.npmjs.org/playwright/-/playwright-1.57.0-alpha-2025-10-24.tgz 0ms (cache hit)
+296 http cache playwright-core@https://registry.npmjs.org/playwright-core/-/playwright-core-1.57.0-alpha-2025-10-24.tgz 0ms (cache hit)
+297 silly tarball no local data for @esbuild/darwin-x64@https://registry.npmjs.org/@esbuild/darwin-x64/-/darwin-x64-0.25.11.tgz. Extracting by manifest.
+298 silly tarball no local data for resolve-pkg-maps@https://registry.npmjs.org/resolve-pkg-maps/-/resolve-pkg-maps-1.0.0.tgz. Extracting by manifest.
+299 silly tarball no local data for get-tsconfig@https://registry.npmjs.org/get-tsconfig/-/get-tsconfig-4.13.0.tgz. Extracting by manifest.
+300 silly tarball no local data for esbuild@https://registry.npmjs.org/esbuild/-/esbuild-0.25.11.tgz. Extracting by manifest.
+301 silly tarball no local data for require-from-string@https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz. Extracting by manifest.
+302 silly tarball no local data for json-schema-traverse@https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz. Extracting by manifest.
+303 silly tarball no local data for fast-uri@https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.0.tgz. Extracting by manifest.
+304 silly tarball no local data for fast-deep-equal@https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz. Extracting by manifest.
+305 silly tarball no local data for husky@https://registry.npmjs.org/husky/-/husky-9.1.7.tgz. Extracting by manifest.
+306 silly tarball no local data for dotenv@https://registry.npmjs.org/dotenv/-/dotenv-16.6.1.tgz. Extracting by manifest.
+307 silly tarball no local data for tsx@https://registry.npmjs.org/tsx/-/tsx-4.20.6.tgz. Extracting by manifest.
+308 silly tarball no local data for fsevents@https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz. Extracting by manifest.
+309 silly tarball no local data for ajv@https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz. Extracting by manifest.
+310 silly tarball no local data for @playwright/mcp@https://registry.npmjs.org/@playwright/mcp/-/mcp-0.0.44.tgz. Extracting by manifest.
+311 silly tarball no local data for playwright@https://registry.npmjs.org/playwright/-/playwright-1.57.0-alpha-2025-10-24.tgz. Extracting by manifest.
+312 silly tarball no local data for playwright-core@https://registry.npmjs.org/playwright-core/-/playwright-core-1.57.0-alpha-2025-10-24.tgz. Extracting by manifest.
+313 http fetch GET 200 https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz 108ms (cache miss)
+314 http fetch GET 200 https://registry.npmjs.org/resolve-pkg-maps/-/resolve-pkg-maps-1.0.0.tgz 115ms (cache miss)
+315 http fetch GET 200 https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz 116ms (cache miss)
+316 http fetch GET 200 https://registry.npmjs.org/get-tsconfig/-/get-tsconfig-4.13.0.tgz 120ms (cache miss)
+317 http fetch GET 200 https://registry.npmjs.org/esbuild/-/esbuild-0.25.11.tgz 147ms (cache miss)
+318 http fetch GET 200 https://registry.npmjs.org/husky/-/husky-9.1.7.tgz 161ms (cache miss)
+319 http fetch GET 200 https://registry.npmjs.org/dotenv/-/dotenv-16.6.1.tgz 181ms (cache miss)
+320 http fetch GET 200 https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.0.tgz 200ms (cache miss)
+321 http fetch GET 200 https://registry.npmjs.org/@playwright/mcp/-/mcp-0.0.44.tgz 251ms (cache miss)
+322 http fetch GET 200 https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz 280ms (cache miss)
+323 http fetch GET 200 https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz 286ms (cache miss)
+324 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 375ms
+325 silly audit report {}
+326 http fetch GET 200 https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz 603ms (cache miss)
+327 http fetch GET 200 https://registry.npmjs.org/playwright/-/playwright-1.57.0-alpha-2025-10-24.tgz 1886ms (cache miss)
+328 http fetch GET 200 https://registry.npmjs.org/playwright-core/-/playwright-core-1.57.0-alpha-2025-10-24.tgz 3627ms (cache miss)
+329 http fetch GET 200 https://registry.npmjs.org/tsx/-/tsx-4.20.6.tgz 8818ms (cache miss)
+330 http fetch GET 200 https://registry.npmjs.org/@esbuild/darwin-x64/-/darwin-x64-0.25.11.tgz 8907ms (cache miss)
+331 info run fsevents@2.3.3 install node_modules/tsx/node_modules/fsevents node-gyp rebuild
+332 info run fsevents@2.3.3 install { code: 1, signal: null }
+333 verbose reify failed optional dependency /Users/andrey/Desktop/n8n-agent/node_modules/tsx/node_modules/fsevents
+334 silly reify mark deleted [
+334 silly reify   '/Users/andrey/Desktop/n8n-agent/node_modules/tsx/node_modules/fsevents'
+334 silly reify ]
+335 info run esbuild@0.25.11 postinstall node_modules/esbuild node install.js
+336 info run esbuild@0.25.11 postinstall { code: 0, signal: null }
+337 silly ADD node_modules/resolve-pkg-maps
+338 silly ADD
+339 silly ADD
+340 silly ADD
+341 silly ADD
+342 silly ADD
+343 silly ADD
+344 silly ADD
+345 silly ADD
+346 silly ADD
+347 silly ADD
+348 silly ADD
+349 silly ADD
+350 silly ADD
+351 silly ADD
+352 silly ADD
+353 silly ADD
+354 silly ADD
+355 silly ADD
+356 silly ADD
+357 silly ADD
+358 silly ADD node_modules/@esbuild/darwin-x64
+359 silly ADD
+360 silly ADD
+361 silly ADD
+362 silly ADD
+363 silly ADD
+364 silly ADD node_modules/get-tsconfig
+365 silly ADD node_modules/esbuild
+366 silly ADD node_modules/require-from-string
+367 silly ADD node_modules/json-schema-traverse
+368 silly ADD node_modules/fast-uri
+369 silly ADD node_modules/fast-deep-equal
+370 silly ADD node_modules/tsx
+371 silly ADD
+372 silly ADD node_modules/husky
+373 silly ADD node_modules/dotenv
+374 silly ADD node_modules/ajv
+375 silly ADD node_modules/@playwright/mcp
+376 silly ADD node_modules/@playwright/mcp/node_modules/playwright-core
+377 silly ADD node_modules/@playwright/mcp/node_modules/playwright
+378 verbose cwd /Users/andrey/Desktop/n8n-agent
+379 verbose os Darwin 24.6.0
+380 verbose node v23.11.0
+381 verbose npm  v10.9.2
+382 notice
+382 notice New major version of npm available! 10.9.2 -> 11.6.2
+382 notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.2
+382 notice To update run: npm install -g npm@11.6.2
+382 notice  { force: true, [Symbol(proc-log.meta)]: true }
+383 verbose exit 0
+384 info ok

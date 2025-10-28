@@ -5,9 +5,9 @@
   "main": "index.js",
   "directories": {},
   "scripts": {
-    "auth:refresh": "bash auth/refresh_state.sh",
-    "auth:check": "node auth/check_auth.js",
-    "auth:demo": "HEADLESS=false DEMO=1 SLOWMO=350 node auth/login.js",
+    "auth:refresh": "node -r dotenv/config auth/login.js",
+    "auth:check": "node -r dotenv/config auth/check_auth.js",
+    "auth:demo": "HEADLESS=false DEMO=1 SLOWMO=350 node -r dotenv/config auth/login.js",
     "mcp:start": "npx @playwright/mcp@0.0.44 --storage-state=auth/state.json",
     "postinstall": "playwright install --with-deps",
     "validate:artifacts": "node scripts/validate-artifacts.js",
@@ -24,6 +24,7 @@
   "devDependencies": {
     "ajv": "^8.17.1",
     "tsx": "^4.19.0",
+    "dotenv": "^16.4.5",
     "@playwright/mcp": "0.0.44",
     "playwright": "^1.56.1",
     "husky": "^9.1.6"
